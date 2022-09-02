@@ -1,0 +1,70 @@
+.form-signin {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .brand-logo {
+    align-self: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .brand-logo {
+      animation: brand-logo-spin infinite 20s linear;
+    }
+  }
+
+  @keyframes brand-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .wrapper-signin-controls {
+    width: 300px;
+    max-width: 300px;
+    align-self: center;
+
+    .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-control:focus {
+      z-index: 2;
+    }
+
+    .form-password {
+      position: relative;
+    }
+
+    .form-password--revel-toggler {
+      cursor: pointer;
+      position: absolute;
+      left: auto;
+      right: 10px;
+      top: 35%;
+      transform: translateY(-50%);
+      z-index: 3;
+      & .ui-icon {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
